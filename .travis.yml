@@ -1,0 +1,8 @@
+language: ruby
+rvm:
+  - 2.6.5
+
+script:
+  - bundle install
+  - bundle exec rails db:migrate RAILS_ENV=test
+  - bundle exec rails test
