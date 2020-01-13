@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+# test (remove after)
   private
 
   def user_params
