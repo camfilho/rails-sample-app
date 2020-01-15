@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     p user, session_params[:password]
     if user&.authenticate(session_params[:password])
       log_in user
+      remember user
       redirect_to user
     else
       flash.now[:danger] = 'Totally Wrong!'
